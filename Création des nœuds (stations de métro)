@@ -1,0 +1,164 @@
+// Création des contraintes et index pour chaque noeud
+CREATE CONSTRAINT ON (l:Ligne1) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne2) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne3) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne3b) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne4) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne5) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne6) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne7) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne7b) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne8) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne9) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne10) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne11) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne12) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne13) ASSERT l.stop_id IS UNIQUE;
+CREATE CONSTRAINT ON (l:Ligne14) ASSERT l.stop_id IS UNIQUE;
+
+// Chargement du fichier csv des stations en indiquant qu'il existe une ligne d'entête
+// Creation des noeuds pour la ligne 1 (stops1) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops1.csv" AS row
+MERGE (l:Ligne1{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne 2 (stops2) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops2.csv" AS row
+MERGE (l:Ligne2{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+
+// Creation des noeuds pour la ligne 3 (stops3) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops3.csv" AS row
+MERGE (l:Ligne3{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne 3b (stops3b) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops3b.csv" AS row
+MERGE (l:Ligne3b{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+
+// Creation des noeuds pour la ligne 4 (stops4) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops4.csv" AS row
+MERGE (l:Ligne4{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne (5) (stops5) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops5.csv" AS row
+MERGE (l:Ligne5{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne 6 (stops6) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops6.csv" AS row
+MERGE (l:Ligne6{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne 7 (stops7) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops7.csv" AS row
+MERGE (l:Ligne7{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+// Creation des noeuds pour la ligne 7b (stops7b) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops7b.csv" AS row
+MERGE (l:Ligne7b{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type; 
+
+ // Creation des noeuds pour la ligne 8 (stops8) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops8.csv" AS row
+MERGE (l:Ligne8{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type; 
+
+ // Creation des noeuds pour la ligne 9 (stops9) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops9.csv" AS row
+MERGE (l:Ligne9{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;
+
+ // Creation des noeuds pour la ligne 10 (stops10) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops10.csv" AS row
+MERGE (l:Ligne10{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+  // Creation des noeuds pour la ligne 11 (stops11) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops11.csv" AS row
+MERGE (l:Ligne11{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+ // Creation des noeuds pour la ligne 12 (stops12) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops12.csv" AS row
+MERGE (l:Ligne12{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+ // Creation des noeuds pour la ligne 13 (stops13) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops13.csv" AS row
+MERGE (l:Ligne13{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
+
+ // Creation des noeuds pour la ligne 14 (stops14) 
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops14.csv" AS row
+MERGE (l:Ligne14{stop_id:row.stop_id})
+ON CREATE SET l.name = row.stop_name, // Nom de la station
+ l.adresse = row.stop_desc, // adresse de la station
+ l.latitude = row.stop_lat, // latitude de la station
+ l.longitude = row.top_lon, // longitude de la station
+ l.location_type = row.location_type;  
