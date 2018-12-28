@@ -23,7 +23,7 @@ MERGE (l:Ligne1{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne 2 (stops2) 
@@ -32,7 +32,7 @@ MERGE (l:Ligne2{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 
@@ -42,7 +42,7 @@ MERGE (l:Ligne3{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne 3b (stops3b) 
@@ -51,7 +51,7 @@ MERGE (l:Ligne3b{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 
@@ -61,7 +61,7 @@ MERGE (l:Ligne4{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne (5) (stops5) 
@@ -70,7 +70,7 @@ MERGE (l:Ligne5{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne 6 (stops6) 
@@ -79,7 +79,7 @@ MERGE (l:Ligne6{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne 7 (stops7) 
@@ -88,7 +88,7 @@ MERGE (l:Ligne7{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
 // Creation des noeuds pour la ligne 7b (stops7b) 
@@ -97,7 +97,7 @@ MERGE (l:Ligne7b{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type; 
 
  // Creation des noeuds pour la ligne 8 (stops8) 
@@ -106,7 +106,7 @@ MERGE (l:Ligne8{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type; 
 
  // Creation des noeuds pour la ligne 9 (stops9) 
@@ -115,7 +115,7 @@ MERGE (l:Ligne9{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;
 
  // Creation des noeuds pour la ligne 10 (stops10) 
@@ -124,7 +124,7 @@ MERGE (l:Ligne10{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
   // Creation des noeuds pour la ligne 11 (stops11) 
@@ -142,7 +142,7 @@ MERGE (l:Ligne12{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
  // Creation des noeuds pour la ligne 13 (stops13) 
@@ -151,7 +151,7 @@ MERGE (l:Ligne13{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
 
  // Creation des noeuds pour la ligne 14 (stops14) 
@@ -160,5 +160,5 @@ MERGE (l:Ligne14{stop_id:row.stop_id})
 ON CREATE SET l.name = row.stop_name, // Nom de la station
  l.adresse = row.stop_desc, // adresse de la station
  l.latitude = row.stop_lat, // latitude de la station
- l.longitude = row.top_lon, // longitude de la station
+ l.longitude = row.stop_lon, // longitude de la station
  l.location_type = row.location_type;  
