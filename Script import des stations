@@ -1,0 +1,208 @@
+//Chargement des données de la ligne 1
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops1.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 1  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 2
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops2.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 2  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 3
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops3.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 3  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 3b
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops3b.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 3b  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 4
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops4.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 4  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 5
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops5.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 5  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 6
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops6.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 6  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 7
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops7.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 7  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 7b
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops7b.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 7b  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 8
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops8.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 8  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 9
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops9.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 9  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 10
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops10.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 10  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 11
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops11.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 11  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 12
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops12.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 12  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 13
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops13.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 13  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
+//Chargement des données de la ligne 14
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/chrissie705/hello-world/chrissie705-patch-1/stops14.csv" as row
+// Il faut gérer les 2 quais s'une station. On récupère donc 2 stop_id
+MERGE (s:Station{name:row.stop_name})
+ON CREATE SET s.stop_id_1 = toInteger(row.stop_id), // stop_id du quai 1
+    s.name = row.stop_name,
+    s.address = row.stop_desc,
+    s.latitude = row.stop_lat,
+    s.longitude = row.stop_lon,
+    s.ligne = 14  // On flaggue la ligne de métro
+ON MATCH SET s.stop_id_2 = toInteger(row.stop_id) // stop_id du quai 2
+
+
