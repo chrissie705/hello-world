@@ -1,0 +1,29 @@
+{
+  "name": "lazytrip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrissie705/hello-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrissie705/hello-world/issues"
+  },
+  "homepage": "https://github.com/chrissie705/hello-world#readme",
+  "dependencies": {
+    "async-file": "^2.0.2",
+    "axios": "^0.18.0",
+    "form-data": "^2.3.3",
+    "html-to-json": "^0.6.0",
+    "html2json": "^1.0.2",
+    "lodash": "^4.17.11",
+    "querystring": "^0.2.0",
+    "xml2js": "^0.4.19"
+  }
+}
