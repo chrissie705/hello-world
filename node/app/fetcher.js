@@ -40,9 +40,10 @@ function getRubriqueByDepartement(departement) {
   };
 }
 
-async function fetchRubrique(url, values, nbpage = 1) {
-  console.log(url, values, nbpage);
-  return await axios.post(url, querystring.stringify({ values, nbpage }));
+async function fetchRubrique(url, values, npage = 1) {
+  console.log(url, values, npage);
+  console.log(querystring.stringify({ values, npage }));
+  return await axios.post(url, querystring.stringify({ values, npage }));
 }
 
 module.exports = {
