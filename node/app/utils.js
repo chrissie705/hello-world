@@ -16,13 +16,15 @@ Object.defineProperty(Promise, 'allKeys', {
   }
 })
 
-const asyncWrapper = fn => arg => {
-  return Promise.resolve(arg)
-    .then(fn)
-    .catch(e => e);
+function asyncWrapper(fn) {
+  return async args => {
+    const asyncArg = await Promise.resolve(args);
+    return await fn(asyncArg);
+  };
 }
-const flowAsync = (fns) => {
-  const wrappedFns = fns.map(fn => asyncWrapper(fn))
+
+function flowAsync (fns) {
+  const wrappedFns = fns.map(asyncWrapper);
   return flow(wrappedFns);
 }
 

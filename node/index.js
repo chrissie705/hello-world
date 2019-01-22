@@ -1,6 +1,6 @@
 const fetcher = require('./app/fetcher');
 const parser = require('./app/parser');
-const dataCleaner =require('./app/dataCleaner');
+const dataTransformer =require('./app/dataTransformer');
 const fs = require('async-file');
 const _ = require('lodash');
 const utils = require('./app/utils');
@@ -12,7 +12,7 @@ async function getInfo(){
     jsonCollection = await utils.flowAsync([
       parser.convertRubriqueXmlToObject,
       parser.mapRubriqueToObject,
-      dataCleaner.cleanMainJson,
+      dataTransformer.performMappers,
     ])(xmlCollection);
   } catch(e) {
     console.error(e);

@@ -12,12 +12,12 @@ async function getPageNumber(xml) {
 
 async function extractArticlesToJson(xml) {
   return  await htmlToJson.parse(xml, function() {
-    const names = this.map('div[itemscope] [itemprop="name"]', name => name.text());
-    const urlImgs = this.map('div[itemscope] [itemprop="image"]', urlImg => urlImg.attr('src'));
-    const descriptions = this.map('div[itemscope]', description => description.text());
-    const infos = this.map('div[itemscope] ul.detail', info => info.text());
+    const name = this.map('div[itemscope] [itemprop="name"]', name => name.text());
+    const urlImg = this.map('div[itemscope] [itemprop="image"]', urlImg => urlImg.attr('src'));
+    const description = this.map('div[itemscope]', description => description.text());
+    const info = this.map('div[itemscope] ul.detail', info => info.text());
 
-    return {names, urlImgs, descriptions, infos};
+    return {name, urlImg, description, info};
   });
 }
 
