@@ -15,7 +15,11 @@ async function extractArticlesToJson(xml) {
     const name = this.map('div[itemscope] [itemprop="name"]', name => name.text());
     const urlImg = this.map('div[itemscope] [itemprop="image"]', urlImg => urlImg.attr('src'));
     const description = this.map('div[itemscope]', description => description.text());
-    const info = this.map('div[itemscope] ul.detail', info => info.text());
+    const info = this.map('div[itemscope] ul.detail', function (info) {
+     return this.map('li', function(detailsInfo){
+       return detailsInfo.text();
+     })
+    });
 
     return {name, urlImg, description, info};
   });
@@ -47,31 +51,20 @@ async function convertRubriqueXmlToAsyncObject(XmlCollection){
 
 function mapRubriqueToObject(jsonRowObject) {
   return _.reduce(jsonRowObject, (acc, rubriqueArray, rubriqueArrayLabel) => {
+    const labels =  rubriqueArrayLabel.split('/');
     const keys = Object.keys(rubriqueArray);
     const mergeArrays = mergeArraysByKeys(keys);
-    acc[rubriqueArrayLabel] = _.zipWith(..._.values(rubriqueArray), mergeArrays);
-    return acc;
-  }, {});
+    const sameLabelObjects = _.zipWith(..._.values(rubriqueArray), mergeArrays);
+    const sameLabelObjectsLibelled = _.map(sameLabelObjects, o => {
+      return Object.assign({}, o, { categories: labels});
+    });
+    return [...acc, ...sameLabelObjectsLibelled];
+  },[])
 }
 
 function mergeArraysByKeys(keys) {
   return (...values) => _.fromPairs(_.map(values, (value, index) => {
     return [keys[index], value]}));
-}
-
-
-async function asynccustomizer(objValue, srcValue) {
-  const a = await Promise.resolve(objValue);
-  const b = await Promise.resolve(srcValue);
-  if (_.isArray(a)) {
-    return [...a, ...b];
-  }
-}
-
-function customizer(objValue, srcValue) {
-  if (_.isArray(objValue)) {
-    return objValue.concat(srcValue);
-  }
 }
 
 async function convertRubriqueXmlToObject(XmlCollection){

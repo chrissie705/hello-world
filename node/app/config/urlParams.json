@@ -1,9 +1,0 @@
-{
-	"url": "https://www.offi.fr/ajax/recherche.php",
-	"categories": [
-		{
-			"label": "cinema: tous les films à l'affiche",
-			"params": "idPage=18&acSearch=&GenreCinema=0&Seance=0&sch_ville={departement}&CodeINSEE=&Circuit=0&Version=0&Version2=0&Age=0"
-		}
-	]
-}

@@ -11,6 +11,7 @@ function getRubrique(params) {
     return await _.reduce(params.categories, async (acc, category) => {
       let collection = await acc;
       const fetchRubriquePage = fetchRubrique.bind(null, params.url, _.replace(category.params, '{departement}', departement));
+      console.log(`==[${category.label}]==`);
       const result = await fetchRubriquePage();
 
       collection[category.label] = [result.data];
@@ -41,7 +42,6 @@ function getRubriqueByDepartement(departement) {
 }
 
 async function fetchRubrique(url, values, npage = 1) {
-  console.log(url, values, npage);
   console.log(querystring.stringify({ values, npage }));
   return await axios.post(url, querystring.stringify({ values, npage }));
 }

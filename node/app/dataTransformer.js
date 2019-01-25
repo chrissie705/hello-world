@@ -1,17 +1,6 @@
 const _ = require('lodash');
-
-function cleanDescription(node) {
-  return Object.assign({}, node,  { description: cleanerDescriptions(node.description, node)});
-}
-
-function cleanerDescriptions(dirtyValue, item){
-  return dirtyValue
-    .replace(item.name, '')
-    .replace(item.info, '')
-    .replace('\t\n\n\t\n\n\t\n', '')
-    .replace('\t\n\t\n', '')
-}
-
+const moment = require('moment');
+moment.locale('fr');
 // cleaner
 const itemCleaner = {
   description: cleanerDescriptions,
@@ -20,18 +9,56 @@ const itemCleaner = {
 const mapperPropsInfos = require('./config/propMapper.json');
 
 // apply a mapper on each node of the collection of each category
-function performMappers(json){
-  return _.reduce(json, (acc, rubrique, key) => {
-    return Object.assign({}, {[key]: _.map(rubrique, _.flow([
+function performMappers(collections){
+  return _.map(collections, _.flow([
       cleanDescription,
       extractInfosFromNode(mapperPropsInfos)('info'),
       // add other mappers here
-      removeprop('info'),
-    ]))}, acc);
-  }, {});
+      convertDurationToMinutes('duration', 'durationInMinutes'),
+      convertDateFrenchToIso('dtRelease', 'dtRelease', 'DD/MM/yyyy'),
+      convertDateFrenchToIso('dtStart', 'dtStart', 'D MMMM yyyy'),
+      convertDateFrenchToIso('dtEnd', 'dtEnd', 'D MMMM yyyy'),
+      splitData('artistes', 'artistes', ', '),
+      //getSchedule(['Programmation'], 'schedules'),
+      getPlaceSchedule('lieu', ['programmation'], 'schedules'),
+      removeProp('info'),
+    ]));
 }
 
-function removeprop(prop) {
+function getPlaceSchedule(placeProp, schedulesProps, propToSave){
+  return node => {
+    const placeCleaned = (node[placeProp]||'').replace(/\n+|\t+/g, '');
+    return getSchedule(schedulesProps, propToSave, placeCleaned)(node);
+  };
+}
+
+function getSchedule(schedulesProps, propToSave, place) {
+  return node => {
+      const schedules = _.map(schedulesProps, schedule => {
+        return ((node[schedule]||'').match(/[0-9]{1,2}h[0-9]{0,2}-[0-9]{1,2}h[0-9]{0,2}/g) || [])
+          .map(s => {
+            const ss = s.split('-');
+            return {start: ss[0], end: ss[1], place};
+          })
+      });
+      return Object.assign({}, node, {[propToSave]: schedules});
+  };
+}
+
+function cleanDescription(node) {
+  return Object.assign({}, node,  { description: cleanerDescriptions(node.description, node)});
+}
+
+function cleanerDescriptions(dirtyValue, item){
+  return dirtyValue
+    .replace(item.name, '')
+    .replace(/\t\n\t\t.+/g, '')
+    .replace(/\n+|\t+/g, '')
+    .replace(/^   \([0-9]+ avis\)/, '')
+    .replace(/(\W) - .+/, '$1');
+  }
+
+function removeProp(prop) {
   return json => {
     const { [prop]: undefined, ...otherProps} = json;
     return otherProps;
@@ -45,10 +72,10 @@ function extractInfosFromNode(mapper) {
   return propInfo => 
     node => {
       const spreadValueInPropsMapperNode = spreadValueInPropsMapper(node);
-      const cleanedNode = node[propInfo].replace('\n', '').replace(END_LINE_INFOS, '');
-      const explodedCollection = cleanedNode.split('\t\t');
-      const cleanedExplodedCollection = explodedCollection.filter(n => n);
-      const splittedPropValues = cleanedExplodedCollection.map(v => v.split(' : '));
+      //const cleanedNode = node[propInfo].replace('\n', '').replace(END_LINE_INFOS, '');
+      //const explodedCollection = cleanedNode.split('\t\t');
+      //const cleanedExplodedCollection = explodedCollection.filter(n => n);
+      const splittedPropValues = node[propInfo].map(v => v.split(' : '));
       return Object.assign({}, spreadValueInPropsMapperNode(splittedPropValues), node);
     };
 }
@@ -59,7 +86,18 @@ function spreadValueInProps(mapper){
       _.reduce(values, 
       (acc, propVal) => Object.assign({[mapper[propVal[0]] || propVal[0]]: propVal[1]}, acc),
       {});
-    
+}
+
+function convertDurationToMinutes(prop, newProp){
+  return node => node[prop] ? Object.assign({}, node, {[newProp]: moment.duration(`PT${ (node[prop]||'').toUpperCase() }M`).as('minutes')}) : node;
+}
+
+function splitData(prop, newProp, separator){
+  return node => node[prop] ? Object.assign({}, node, {[newProp]: node[prop].split(separator)}) : node;
+}
+
+function convertDateFrenchToIso(prop, newProp, fromFormat){
+  return node => node[prop] ? Object.assign({}, node, {[newProp]: moment(node[prop], fromFormat).format('YYYY-MM-DD')}) : node;
 }
 
 module.exports = {
