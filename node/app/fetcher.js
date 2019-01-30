@@ -46,7 +46,30 @@ async function fetchRubrique(url, values, npage = 1) {
   return await axios.post(url, querystring.stringify({ values, npage }));
 }
 
+async function fetchPage(url) {
+  return await axios.get(url);
+}
+
+function getDetailsByUrls (rubriqueCollections) {
+  return _.uniq(_.flatMap(rubriqueCollections, node => node.details));
+}
+
+function getDetailXmlFromUrls (baseUrl){
+  return async  urls =>  {
+    return _.reduce(urls, async (acc, url) => {
+      const results = await acc;
+      if(_.startsWith(url, '/')) {
+        const result = await fetchPage(`${baseUrl}${url}`);
+        results[url] = result.data;
+      }
+      return results;
+    }, {});
+  }
+}
+
 module.exports = {
   getRubrique: getRubrique(params),
   getRubriqueByDepartement: getRubriqueByDepartement(departements),
+  getDetailsByUrls,
+  getDetailXmlFromUrls,
 };

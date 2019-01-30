@@ -19,22 +19,27 @@ function performMappers(collections){
       convertDateFrenchToIso('dtStart', 'dtStart', 'D MMMM yyyy'),
       convertDateFrenchToIso('dtEnd', 'dtEnd', 'D MMMM yyyy'),
       splitData('artistes', 'artistes', ', '),
+      cleanNodeProp('lieu'),
       //getSchedule(['Programmation'], 'schedules'),
       getPlaceSchedule('lieu', ['programmation'], 'schedules'),
       removeProp('info'),
     ]));
 }
 
-function getPlaceSchedule(placeProp, schedulesProps, propToSave){
+function cleanNodeProp(prop) {
   return node => {
-    const placeCleaned = (node[placeProp]||'').replace(/\n+|\t+/g, '');
-    return getSchedule(schedulesProps, propToSave, placeCleaned)(node);
+    const propCleaned = (node[prop]||'').replace(/\n+|\t+/g, '');
+    return Object.assign({}, node, { [prop]:  propCleaned});
   };
+}
+
+function getPlaceSchedule(placeProp, schedulesProps, propToSave){
+  return node => getSchedule(schedulesProps, propToSave, node[placeProp])(node);
 }
 
 function getSchedule(schedulesProps, propToSave, place) {
   return node => {
-      const schedules = _.map(schedulesProps, schedule => {
+      const schedules = _.flatMap(schedulesProps, schedule => {
         return ((node[schedule]||'').match(/[0-9]{1,2}h[0-9]{0,2}-[0-9]{1,2}h[0-9]{0,2}/g) || [])
           .map(s => {
             const ss = s.split('-');
@@ -100,6 +105,21 @@ function convertDateFrenchToIso(prop, newProp, fromFormat){
   return node => node[prop] ? Object.assign({}, node, {[newProp]: moment(node[prop], fromFormat).format('YYYY-MM-DD')}) : node;
 }
 
+function mergeArticleToPlace(jsonCollection, detailsCollection) {
+  return _.map(jsonCollection, node => {
+    const addresses =  _.map(node.details, details => Object.assign({}, detailsCollection[details]));
+    return Object.assign({}, node, { addresses });
+  });
+}
+
+function getGeoJson(object) {
+  return _.mapValues(object, v => { 
+    const {longitude, latitude} = v;
+    return Object.assign({}, v, {loc: {type: 'Point', coordinates: [longitude, latitude]}})});
+}
+
 module.exports = {
   performMappers,
+  mergeArticleToPlace,
+  getGeoJson,
 }

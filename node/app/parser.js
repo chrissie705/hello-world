@@ -15,13 +15,17 @@ async function extractArticlesToJson(xml) {
     const name = this.map('div[itemscope] [itemprop="name"]', name => name.text());
     const urlImg = this.map('div[itemscope] [itemprop="image"]', urlImg => urlImg.attr('src'));
     const description = this.map('div[itemscope]', description => description.text());
+    //parse les infos de l'evennement
     const info = this.map('div[itemscope] ul.detail', function (info) {
-     return this.map('li', function(detailsInfo){
-       return detailsInfo.text();
-     })
+     return this.map('li', detailsInfo => detailsInfo.text());
     });
 
-    return {name, urlImg, description, info};
+    //va chercher l'url des details de l'evennement
+    const details = this.map('div[itemscope] ul.detail', function (info) {
+        return this.map('a[href]', urlDetails => urlDetails.attr('href'))
+     });
+
+    return {name, urlImg, description, info, details};
   });
 }
 
@@ -72,9 +76,37 @@ async function convertRubriqueXmlToObject(XmlCollection){
   return rubriqueJson;
 }
 
+async function extractPageToJson(xmlCollection) {
+  return await _.reduce(xmlCollection, async (acc, xml, index) => {
+    const result = await acc;
+    const asynObj = await htmlToJson.parse(xml, function() {
+      //va chercher l'url des details de l'evennement
+      const name = this.map('#content h1 span[itemprop="name"]', name => name.text());
+      const streetAddress = this.map('#content ul.detail span[itemprop="streetAddress"]', name => name.text());
+      const addressLocality = this.map('#content ul.detail span[itemprop="addressLocality"]', name => name.text());
+      const latitude = this.map('#content ul.detail meta[itemprop="latitude"]', name => Number(name.attr('content')));
+      const longitude = this.map('#content ul.detail meta[itemprop="longitude"]', name => Number(name.attr('content')));
+      return {name, streetAddress, addressLocality, addressLocality, latitude, longitude };
+    });
+    const data = await Promise.allKeys(asynObj)
+    const adresseInfo = _.reduce(data, (o, value, index) => {
+      if(_.isArray(value) && value.length) {
+        o[index] = value[0];
+      }
+      return o;
+    },{});
+
+    if(adresseInfo.latitude && adresseInfo.longitude) {
+      result[index] = adresseInfo;
+    }
+    return result;
+  }, {});
+}
+
 module.exports = {
   getPageNumber,
   extractArticlesToJson,
   convertRubriqueXmlToObject,
   mapRubriqueToObject,
+  extractPageToJson,
 }

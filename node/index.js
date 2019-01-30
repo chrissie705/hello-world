@@ -1,27 +1,16 @@
-const fetcher = require('./app/fetcher');
-const parser = require('./app/parser');
-const dataTransformer =require('./app/dataTransformer');
-const fs = require('async-file');
-const _ = require('lodash');
-const utils = require('./app/utils');
-const dao = require('./app/dao');
+const express = require('express');
+const { ApolloServer, gql } = require('apollo-server-express');
+const bodyParser = require('body-parser');
+const schema = require('./app/models/schema');
+const resolvers = require('./app/models/resolvers');
+const graphqlConf = require('./app/config/graphql')
 
-async function getInfo(){
-  const xmlCollection = await fetcher.getRubriqueByDepartement();
-  let  jsonCollection;
-  try {
-    jsonCollection = await utils.flowAsync([
-      parser.convertRubriqueXmlToObject,
-      parser.mapRubriqueToObject,
-      dataTransformer.performMappers,
-    ])(xmlCollection);
-  } catch(e) {
-    console.error(e);
-  };
+const server = new ApolloServer({ schema, resolvers });
 
-  console.log(await dao.insertMany(jsonCollection, true));
-  // await fs.writeFile(`${__dirname}/test.json`, JSON.stringify(jsonCollection));
-}
+const app = express();
 
+server.applyMiddleware({ app, path: graphqlConf.GRAPHQL_PATH });
 
-getInfo();
+app.listen({ port: graphqlConf.GRAPHQL_PORT }, () =>
+  console.log(`🚀 Server ready at http://localhost:${graphqlConf.GRAPHQL_PORT}${server.graphqlPath}`)
+);
