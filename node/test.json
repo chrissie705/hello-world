@@ -1,0 +1,473 @@
+[
+  {
+    "dtEnd": "2019-03-03",
+    "dtStart": "2019-01-15",
+    "lieu": "Bibliothèque nationale de France - site François-Mitterrand\n\t\t - Paris 13e",
+    "programmation": "Tous les jours (sauf lundi, fériés) 10h-19h, dimanche 13h-19h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Vladimir Jankélévitch",
+    "urlImg": "https://files.offi.fr/programmation/1457717/images/120/935ee4eb11f7074c4dda0a7491e0fdd5.jpg",
+    "description": "La pensée et l'itinéraire d'un philosophe, professeur et musicologue.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "10h",
+          "end": "19h",
+          "place": "Bibliothèque nationale de France - site François-Mitterrand - Paris 13e"
+        },
+        {
+          "start": "13h",
+          "end": "19h",
+          "place": "Bibliothèque nationale de France - site François-Mitterrand - Paris 13e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-11",
+    "dtStart": "2019-01-09",
+    "lieu": "Le Bal\n\t\t - Paris 18e",
+    "programmation": "Tous les jours (sauf lundi, mar) 12h-19h, nocturne mercredi jsq 22h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Hannah Darabi",
+    "urlImg": "https://files.offi.fr/programmation/1468085/images/120/d745cc3ce2a46bd07f0cbbdc89ea9c78.jpg",
+    "description": "Rue Enghelab — La révolution par les livres — Iran, 1979-1983.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "12h",
+          "end": "19h",
+          "place": "Le Bal - Paris 18e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-05-05",
+    "dtStart": "2019-01-09",
+    "lieu": "Tour Jean sans Peur\n\t\t - Paris 2e",
+    "programmation": "Du mercredi au dimanche 13h30-18h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "La Fête au Moyen Âge",
+    "urlImg": "https://files.offi.fr/programmation/1468143/images/120/052153547efc93945a230836010880e4.jpg",
+    "description": "La Tour Jean sans Peur présente La Fête au Moyen Âge. Au Moyen Âge, un jour sur trois était chômé en raison des fêtes. Les célébrations...",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "13h30",
+          "end": "18h",
+          "place": "Tour Jean sans Peur - Paris 2e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-07-28",
+    "dtStart": "2019-11-14",
+    "lieu": "Cinémathèque française\n\t\t - Paris 12e",
+    "programmation": "Tous les jours (sauf mardi, 1er janvier, 1er mai, août, 25 décembre) 12h-19h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Youssef Chahine",
+    "urlImg": "https://files.offi.fr/programmation/1443287/images/120/dce127498956e0a87bfa0fcdb6ef4a67.jpg",
+    "description": "Une balade au cœur des mondes de l'artiste.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "12h",
+          "end": "19h",
+          "place": "Cinémathèque française - Paris 12e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-17",
+    "dtStart": "2019-10-10",
+    "lieu": "Institut du Monde Arabe\n\t\t - Paris 5e",
+    "programmation": "Tous les jours (sauf lun) 10h-18h, WE et jrs fériés (sauf 1er mai) jsq 19h (fermet. caisses 45 mn avt). Visites guidées (billet+4€)",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Cités millénaires — Voyage virtuel : de Palmyre à Mossoul",
+    "urlImg": "https://files.offi.fr/programmation/1393531/images/120/f6103065e5e36f8f7676ccfa734f345d.jpg",
+    "description": "Quatre sites majeurs se dévoilent, et renaissent, au sein d'un parcours immersif.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "10h",
+          "end": "18h",
+          "place": "Institut du Monde Arabe - Paris 5e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-10",
+    "dtStart": "2019-10-30",
+    "lieu": "Panthéon\n\t\t - Paris 5e",
+    "programmation": "Tous les jours 10h-18h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Georges Clemenceau, Le courage de la République",
+    "urlImg": "https://files.offi.fr/programmation/1429825/images/120/b89b527962beb65be9c6b7140acdb691.jpg",
+    "description": "Le fondateur de la IIIe République dans tous les aspects de sa vie.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "10h",
+          "end": "18h",
+          "place": "Panthéon - Paris 5e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-03-11",
+    "dtStart": "2019-11-09",
+    "lieu": "Cité de l'Architecture et du Patrimoine\n\t\t - Paris 16e",
+    "programmation": "Tous les jours (sauf mardi, 1er janvier, 1er mai, 25 décembre) 11h-19h, nocturne jeudi jsq 21h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "L'Art du chantier",
+    "urlImg": "https://files.offi.fr/programmation/1380805/images/120/a081a3e078b6e23348ef6810cf976981.jpg",
+    "description": "Construire et démolir (XVIe-XXIe siècle).",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "11h",
+          "end": "19h",
+          "place": "Cité de l'Architecture et du Patrimoine - Paris 16e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-03-11",
+    "dtStart": "2019-11-14",
+    "lieu": "Centre Georges-Pompidou - BPI\n\t\t - Paris 4e",
+    "programmation": "Tous les jours (sauf mar) 12h-22h, WE et fériés 11h-22h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Riad Sattouf, L'écriture dessinée",
+    "urlImg": "https://files.offi.fr/programmation/1387425/images/120/744a9338ddc4b1de19a072e05c94d7de.jpg",
+    "description": "L’univers graphique d'un artiste aux multiples facettes.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "12h",
+          "end": "22h",
+          "place": "Centre Georges-Pompidou - BPI - Paris 4e"
+        },
+        {
+          "start": "11h",
+          "end": "22h",
+          "place": "Centre Georges-Pompidou - BPI - Paris 4e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-04-07",
+    "dtStart": "2019-11-27",
+    "lieu": "Musée du Quai Branly - Jacques Chirac\n\t\t - Paris 7e",
+    "programmation": "Tous les jours (sauf lundi, 1er mai, 25 décembre) 11h-19h ; nocturne jeudi, vendredi et samedi jsq 21h (fermet. caisse 1h avt). ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Fendre l'air",
+    "urlImg": "https://files.offi.fr/programmation/1444095/images/120/8d99653aca6061ba7614959071817e54.jpg",
+    "description": "Art du bambou au Japon.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "11h",
+          "end": "19h",
+          "place": "Musée du Quai Branly - Jacques Chirac - Paris 7e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-03-28",
+    "dtStart": "2019-09-19",
+    "lieu": "Espace Reine de Saba\n\t\t - Paris 19e",
+    "programmation": "Tous les jours (sauf lundi, 1er janvier, 14 juillet, 25 décembre) 14h30-18h30. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Yemen — Éternité : 45 ans d'aventures avec José-Marie Bel",
+    "urlImg": "https://files.offi.fr/programmation/1412510/images/120/5d0522b07c1878973660fb0cad896525.jpg",
+    "description": "Plus de 250 photographies, aquarelles, objets, maquettes, vitraux, documents...",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "14h30",
+          "end": "18h30",
+          "place": "Espace Reine de Saba - Paris 19e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-04",
+    "dtStart": "2019-10-10",
+    "lieu": "Cinémathèque française\n\t\t - Paris 12e",
+    "programmation": "Tous les jours (sauf mardi, 25 décembre, 1er janvier) 12h-19h, samedi et dimanche 11h-20h. Du 20 octobre au 4 novembre",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Il était une fois Sergio Leone",
+    "urlImg": "https://files.offi.fr/programmation/1422937/images/120/b7d8b3b39229c82e133d4645beefe694.jpg",
+    "description": "Sergio Leone a beaucoup joué aux cowboys et aux Indiens avant de transformer les règles et les codes du western pour conquérir le monde. Adorateur des (…)",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "12h",
+          "end": "19h",
+          "place": "Cinémathèque française - Paris 12e"
+        },
+        {
+          "start": "11h",
+          "end": "20h",
+          "place": "Cinémathèque française - Paris 12e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-15",
+    "dtStart": "2019-11-14",
+    "lieu": "Bibliothèque Mazarine\n\t\t - Paris 6e",
+    "programmation": "Du lundi au vendredi 10h-18h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Maudits livres luthériens",
+    "urlImg": "https://files.offi.fr/programmation/1460977/images/120/f8eb4b38f76e2662e3dd0e7263b6d0ac.jpg",
+    "description": "Aux origines de la Réforme en France.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "10h",
+          "end": "18h",
+          "place": "Bibliothèque Mazarine - Paris 6e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-10",
+    "dtStart": "2019-10-10",
+    "lieu": "Musée d'Art et d'Histoire du Judaïsme\n\t\t - Paris 3e",
+    "programmation": "Tous les jours (sauf lundi, 1er janvier, 1er mai) 11h-18h, nocturne mercredi jsq 21h, samedi et dimanche 10h-19h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Sigmund Freud : du regard à l'écoute",
+    "urlImg": "https://files.offi.fr/programmation/1422950/images/120/0183a78226cac884e6f7b9587fbe1295.jpg",
+    "description": "Un regard neuf sur le cheminement intellectuel et scientifique de l’inventeur de la psychanalyse.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "11h",
+          "end": "18h",
+          "place": "Musée d'Art et d'Histoire du Judaïsme - Paris 3e"
+        },
+        {
+          "start": "10h",
+          "end": "19h",
+          "place": "Musée d'Art et d'Histoire du Judaïsme - Paris 3e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-02-28",
+    "dtStart": "2019-12-14",
+    "lieu": "Centre Expo Lafayette-Drouot\n\t\t - Paris 9e",
+    "programmation": "Tous les jours (sauf lun) 12h30-18h, samedi et dimanche 10h30-19h ; VAC. SCOL.",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Les Fans Contre-Attaquent",
+    "urlImg": "https://files.offi.fr/programmation/1455085/images/120/ee4be78465ecd0ac974a1aeaafa67967.jpg",
+    "description": "La plus grande collection privée d'Europe sur la saga Star Wars.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "12h30",
+          "end": "18h",
+          "place": "Centre Expo Lafayette-Drouot - Paris 9e"
+        },
+        {
+          "start": "10h30",
+          "end": "19h",
+          "place": "Centre Expo Lafayette-Drouot - Paris 9e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-03-04",
+    "dtStart": "2019-09-14",
+    "lieu": "Cité de l'Architecture et du Patrimoine\n\t\t - Paris 16e",
+    "programmation": "Tous les jours (sauf mardi, 1er janvier, 1er mai, 25 décembre) 11h-19h, nocturne jeudi jsq 21h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Le Crac des chevaliers",
+    "urlImg": "https://files.offi.fr/programmation/1380798/images/120/6388bb04cc9c0ddc4b76b935b9579de3.jpg",
+    "description": "Chroniques d'un rêve de pierres.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "11h",
+          "end": "19h",
+          "place": "Cité de l'Architecture et du Patrimoine - Paris 16e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-01-27",
+    "dtStart": "2019-09-29",
+    "lieu": "Musée Cognacq-Jay\n\t\t - Paris 4e",
+    "programmation": "Tous les jours (sauf lundi, fériés) 10h-18h. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "La Fabrique du luxe",
+    "urlImg": "https://files.offi.fr/programmation/1387325/images/120/a05bf6af08a067f91ac573fb2f3f4d24.jpg",
+    "description": "Les marchands merciers parisiens au XVIIIe siècle.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "10h",
+          "end": "18h",
+          "place": "Musée Cognacq-Jay - Paris 4e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-01-27",
+    "dtStart": "2019-11-06",
+    "lieu": "Musée d'Orsay\n\t\t - Paris 7e",
+    "programmation": "Tous les jours (sauf lundi, 1er mai, 25 décembre) 9h30-18h (fermet. caisses 1h avt), jeudi jsq 21h45 (fermet. caisses 45 mn avt). ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Renoir père et fils — Peinture et cinéma",
+    "urlImg": "https://files.offi.fr/programmation/1377674/images/120/da4797b8f26fcdfc025c8f8176c27ed5.jpg",
+    "description": "Un dialogue fécond, et parfois paradoxal, entre les créations d'un père et d'un fils.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "9h30",
+          "end": "18h",
+          "place": "Musée d'Orsay - Paris 7e"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-08-12",
+    "dtStart": "2019-05-02",
+    "lieu": "Musée du Louvre\n\t\t - Paris 1er",
+    "programmation": "Tous les jours (sauf mardi, 1er janvier, 1er mai, 25 décembre) 9h-17h30, nocturne mercredi et vendredi jsq 21h45. ",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Royaumes oubliés",
+    "urlImg": "https://files.offi.fr/lieu/2615/images/120/1252657003593.jpg",
+    "description": "De l'empire hittite aux araméens.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      [
+        {
+          "start": "9h",
+          "end": "17h30",
+          "place": "Musée du Louvre - Paris 1er"
+        }
+      ]
+    ]
+  },
+  {
+    "dtEnd": "2019-08-25",
+    "dtStart": "2019-04-23",
+    "lieu": "Bibliothèque nationale de France - site François-Mitterrand\n\t\t - Paris 13e",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Le Merveilleux-scientifique",
+    "urlImg": "https://files.offi.fr/lieu/1553/images/120/1263554376167.jpg",
+    "description": "Retour sur le mouvement littéraire de l'écrivain Maurice Renard.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      []
+    ]
+  },
+  {
+    "dtEnd": "2019-07-21",
+    "dtStart": "2019-04-16",
+    "lieu": "Bibliothèque nationale de France - site François-Mitterrand\n\t\t - Paris 13e",
+    "Rubrique": "Histoire / Civilisations",
+    "name": "Le Monde en sphères",
+    "urlImg": "https://files.offi.fr/lieu/1553/images/120/1263554376167.jpg",
+    "description": "D’un monde sphérique clos à un univers infini et mouvant.",
+    "categories": [
+      "exposition",
+      "histoire"
+    ],
+    "schedules": [
+      []
+    ]
+  }
+]
