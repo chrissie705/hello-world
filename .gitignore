@@ -1,5 +1,13 @@
+// Ignorer tous les répertoires qui finissent par .ignore
 *.ignore/
+
+// Ignorer tous les répertoires de node_module. Pas besoins de sauvegarder
 **/node_modules/
+
+// Permet de garder la version en cours et pas télécharger de nouvelles versions non utilisées
 package-lock.json
+// Fichier test pour vérifier que les données sont ok
 test.json
+
+// Ne rien sauvegarder du répertoire config. 
 config/*.json
