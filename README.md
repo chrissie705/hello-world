@@ -36,3 +36,14 @@ query {
 	}
 }
 ```
+une requete avec des parametres partiels
+```
+query {
+  activities(
+    filters: { name: "fl" }
+  ){
+  	name
+    categories
+	}
+}
+```
