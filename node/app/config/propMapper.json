@@ -1,0 +1,13 @@
+{
+  "Date de sortie": "dtRelease",
+  "Année de réalisation": "yearExecution",
+  "Genre": "genre",
+  "Durée": "duration",
+  "Réalisateur": "director",
+  "Artistes": "artistes",
+  "Date de fin": "dtEnd",
+  "Date de début": "dtStart",
+  "Lieu": "lieu",
+  "Programmation": "programmation"
+
+}

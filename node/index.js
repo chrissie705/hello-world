@@ -1,11 +1,10 @@
 const express = require('express');
-const { ApolloServer, gql } = require('apollo-server-express');
-const bodyParser = require('body-parser');
-const schema = require('./app/models/schema');
+const { ApolloServer } = require('apollo-server-express');
+const typeDefs = require('./app/models/schema');
 const resolvers = require('./app/models/resolvers');
 const graphqlConf = require('./app/config/graphql')
 
-const server = new ApolloServer({ schema, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
 
