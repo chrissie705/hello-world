@@ -26,12 +26,12 @@ function insertInCollection(collectionLabel) {
   }
 }
 
-function getCollection(collectionLabel) {
+function getCollection(collectionLabel, action = 'find') {
   return async (args) => {
     const { client, db } = await connect();
     let req, res;
     try {
-      req = await db.collection(collectionLabel).find({...args});
+      req = await db.collection(collectionLabel)[action]({...args});
       res = await req.toArray();
     }
     finally {

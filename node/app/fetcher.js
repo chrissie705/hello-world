@@ -1,6 +1,5 @@
 const _ = require('lodash');
 const axios = require('axios');
-const FormData = require('form-data');
 const querystring = require('querystring');
 const parser = require('./parser');
 const params = require('./config/urlParams.json');

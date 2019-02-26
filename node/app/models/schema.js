@@ -64,6 +64,12 @@ type Query {
 
     "temps de parcours en transport"
     timeToTravel: Int
+    
+    "toutes les notes"
+    notes: [Int]!
+
+    #"notes moyenne"
+    #notesMoyenne: Float
   }
 
   type Address {

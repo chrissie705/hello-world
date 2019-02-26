@@ -10,10 +10,12 @@ const resolvers = {
       console.log('filters', filters)
       console.log('disponibilite', disponibilite);
       let newFilters = _.mapValues(filters, value => new RegExp(value));
-      
+      if(filters.categories) {
+        newFilters = Object.assign({}, newFilters, {categories: { $in: filters.categories.split(' ')}})
+      }
       if(position) {
         const pos = { 
-          'addresses.loc': { 
+          'addresses.loc': {
             $nearSphere: {
               $geometry: {
                 type : 'Point',
@@ -25,7 +27,13 @@ const resolvers = {
         };
         newFilters = Object.assign({}, newFilters, pos);
       }
-      return dao.getCollection('activities')({...newFilters}) || [];
+      // somme des notes
+      // notesMoyenne = { $avg: "$notes" };
+
+      // newFilters = Object.assign({}, newFilters, { notesMoyenne })
+      console.log({...newFilters})
+      const res = dao.getCollection('activities', 'find')({...newFilters}) || [];
+      return res;
     },
     allActivities() {
       return dao.getCollection('activities')();
@@ -34,7 +42,8 @@ const resolvers = {
       return _(urlParams.categories)
         .flatMap(cat => cat.label.split('/'))
         .uniq()
-        .sortBy(s => s);
+        .sortBy(s => s)
+        .value();
     }
   },
 };

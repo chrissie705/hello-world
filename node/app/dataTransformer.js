@@ -113,13 +113,21 @@ function mergeArticleToPlace(jsonCollection, detailsCollection) {
 }
 
 function getGeoJson(object) {
-  return _.mapValues(object, v => { 
+  return _.mapValues(object, v => {
     const {longitude, latitude} = v;
     return Object.assign({}, v, {loc: {type: 'Point', coordinates: [longitude, latitude]}})});
+}
+
+function addNotes(object) {
+  return _.map(object, node => {
+    const notes = _.times(_.random(500), () => _.random(1, 5));
+    return Object.assign({}, node, { notes });
+  })
 }
 
 module.exports = {
   performMappers,
   mergeArticleToPlace,
   getGeoJson,
+  addNotes,
 }
