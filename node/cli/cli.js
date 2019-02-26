@@ -8,6 +8,7 @@ const axios = require('axios');
 const qs = require('querystring');
 const client = require('graphql-client')({ url: 'http://localhost:4000/graphql'});
 const _ = require('lodash');
+const util = require('util');
 
 const run = async () => {
   const results = await inquirer.askAdress();
@@ -34,7 +35,7 @@ const run = async () => {
 
   spinActivitiesSearch.stop()
   console.log('Nous vous proposons : ')
-  console.log(groupedNotes)
+  console.log(util.inspect(groupedNotes, {showHidden: false, depth: null, colors: true}))
 }
 
 async function getPosFromAddress(address) {

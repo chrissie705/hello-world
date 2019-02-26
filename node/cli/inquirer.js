@@ -8,8 +8,6 @@ const categories = _(urlParams.categories)
   .uniq()
   .sortBy(s => s)
   .value();
-console.log(categories)
-
 
 module.exports = {
   askAdress(){
