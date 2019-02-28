@@ -1,0 +1,8 @@
+{
+  "uri": "ds149344.mlab.com",
+  "protocol": "mongodb",
+  "port": "49344",
+  "user": "web",
+  "password": "web123",
+  "dbName": "lazytrip_dev" 
+}

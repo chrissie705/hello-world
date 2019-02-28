@@ -23,6 +23,7 @@
     "express": "^4.16.4",
     "form-data": "~2.3.3",
     "graphql": "^14.1.1",
+    "graphql-client": "^2.0.1",
     "html-to-json": "~0.6.0",
     "html2json": "~1.0.2",
     "lodash": "~4.17.11",
@@ -31,5 +32,13 @@
     "mongodb": "~3.1.12",
     "querystring": "~0.2.0",
     "xml2js": "~0.4.19"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.2",
+    "minimist": "^1.2.0"
   }
 }

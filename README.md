@@ -47,3 +47,8 @@ query {
 	}
 }
 ```
+
+
+## CLI (command line interface)
+se placer dans le repertoire lazytrip\node\cli
+lancer la commande : node cli 

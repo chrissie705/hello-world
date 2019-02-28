@@ -1,0 +1,7 @@
+{
+  "api_key": "70eb4ec13c0a2cb00e079cd18f7785b7",
+  "url": "https://developer.citymapper.com",
+  "operation": {
+    "transit": "/api/1/traveltime/"
+  }
+}

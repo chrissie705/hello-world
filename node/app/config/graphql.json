@@ -1,0 +1,4 @@
+{
+  "GRAPHQL_PORT": 4000,
+  "GRAPHQL_PATH": "/graphql"
+}

@@ -1,0 +1,76 @@
+{
+  "baseUrl": "https://www.offi.fr",
+	"url": "https://www.offi.fr/ajax/recherche.php",
+	"categories": [
+		{
+			"label": "film",
+			"params": "idPage=18&acSearch=&GenreCinema=0&Seance=0&sch_ville={departement}&CodeINSEE=&Circuit=0&Version=0&Version2=0&Age=0"
+    },
+    {
+			"label": "theatre",
+      "params": "idPage=199&acSearch=&SRubrique=0&DateDebut=&DateFin=&NbDay=0&Circuit=0&sch_ville={departement}&CodeINSEE=0"
+    },
+    {
+      "label": "exposition/beau arts",
+      "params": "idPage=39&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/art contemporain",
+      "params": "idPage=41&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/photographie",
+      "params": "idPage=40&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/design",
+      "params": "idPage=42&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/histoire",
+      "params": "idPage=43&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/sciences",
+      "params": "idPage=44&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/salons",
+      "params": "idPage=45&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "exposition/galeries",
+      "params": "idPage=49&acSearch=&Circuit=0&CodeINSEE=0&sch_ville={departement}&CodeINSEE=&Programmation="
+    },
+    {
+      "label": "musique",
+      "params": "idPage=11&acSearch=&SRubrique=0&DateDebut=&DateFin=&NbDay=0&sch_ville={departement}&CodeINSEE="
+    },
+    {
+      "label": "enfants",
+      "params": "idPage=8&acSearch=&DateDebut=&DateFin=&NbDay=0&tranche_age=&sch_ville={departement}&CodeINSEE="
+    },
+    {
+      "label": "enfants/pièces classiques",
+      "params": "idPage=50&acSearch=&DateDebut=&DateFin=&NbDay=0&tranche_age=&sch_ville={departement}&CodeINSEE="
+    },
+    {
+      "label": "enfants/autres spectacles",
+      "params": "idPage=51&acSearch=&DateDebut=&DateFin=&NbDay=0&tranche_age=&sch_ville={departement}&CodeINSEE="
+    },
+
+    {
+      "label": "enfants/ateliers",
+      "params": "idPage=52&acSearch=&DateDebut=&DateFin=&NbDay=0&sch_ville={departement}&CodeINSEE="
+    },
+
+    {
+      "label": "visites de paris",
+      "params": "idPage=66&acSearch=&DateDebut=&DateFin=&NbDay=1"
+    },
+    {
+      "label": "cabarets",
+      "params": "idPage=68&acSearch=&sch_ville={departement}&CodeINSEE=&Secteur=0&NiveauPrix="
+    }
+	]
+}

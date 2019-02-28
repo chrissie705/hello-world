@@ -15,18 +15,19 @@ async function getInfo(){
       parser.convertRubriqueXmlToObject,
       parser.mapRubriqueToObject,
       dataTransformer.performMappers,
+      dataTransformer.addNotes,
     ])(xmlCollection);
 
     detailsCollection = await utils.flowAsync([
       fetcher.getDetailsByUrls,
       fetcher.getDetailXmlFromUrls(config.baseUrl),
       parser.extractPageToJson,
-      dataTransformer.getGeoJson
+      dataTransformer.getGeoJson,
     ])(jsonCollection);
-    console.log(detailsCollection);
 
     mergedArticleToPlace = dataTransformer.mergeArticleToPlace(jsonCollection, detailsCollection);
 
+    console.log(mergedArticleToPlace);
   } catch(e) {
     console.error(e);
   };

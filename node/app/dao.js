@@ -26,14 +26,12 @@ function insertInCollection(collectionLabel) {
   }
 }
 
-function getCollection(collectionLabel) {
+function getCollection(collectionLabel, action = 'find') {
   return async (args) => {
     const { client, db } = await connect();
     let req, res;
     try {
-//      db.activities.find(   {   "addresses.loc":{        $nearSphere: {           $geometry: {              type : "Point",              coordinates : [ 2.36 , 48.8 ]
-// },            $maxDistance: 15000        }   }   }).count()
-      req = await db.collection(collectionLabel).find({...args});
+      req = await db.collection(collectionLabel)[action]({...args});
       res = await req.toArray();
     }
     finally {
